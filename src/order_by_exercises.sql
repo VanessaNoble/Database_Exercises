@@ -16,6 +16,14 @@ WHERE first_name in ('Irena', 'Vidya', 'Maya')
       AND gender = "M"
 ORDER BY  last_name, first_name ASC;
 
+# Change the order by clause so that you order by last name before first name.
+# Your first result should still be Irena Acton but now the last result should be Maya Zyda
+SELECT  * FROM employees
+WHERE last_name like 'e%e'
+ORDER BY  last_name, first_name;
+
+
+
 
 
 
