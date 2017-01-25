@@ -33,7 +33,12 @@ SELECT * FROM employees
 WHERE birth_date LIKE '%12-25'
       AND hire_date BETWEEN '1999-01-01' and '1999-12-31';
 
+# Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
 
+SELECT * FROM employees
+WHERE birth_date LIKE '%12-25'
+      AND hire_date BETWEEN '1999-01-01' and '1999-12-31'
+ORDER BY birth_date, hire_date DESC;
 
 
 
