@@ -17,6 +17,16 @@ SELECT  concat(first_name," ", last_name) as "fullname"
 FROM employees
 WHERE last_name like 'e%e';
 
+# employees born on Christmas and hired in the 90s, use datediff()
+# to find how many days they have been working at the company
+# part three
+
+SELECT  first_name, last_name, datediff(now(), hire_date) as "number of days employed"
+FROM employees
+WHERE birth_date LIKE '%12-25'
+      AND hire_date BETWEEN '1999-01-01' and '1999-12-31';
+
+
 
 
 
