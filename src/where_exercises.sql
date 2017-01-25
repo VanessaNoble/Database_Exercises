@@ -47,6 +47,15 @@ WHERE hire_date LIKE '199%'
       AND birth_date LIKE '%12-25';
 
 
+# Employees with a 'q' in their last name — 1,873 rows.
+# Find all employees with a 'q' in their last name but not 'qu' — 547 rows
+SELECT * FROM employees
+WHERE last_name LIKE '%q%'
+  AND NOT last_name LIKE '%qu%';
+
+
+
+
 
 
 
