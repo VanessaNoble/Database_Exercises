@@ -28,6 +28,11 @@ SELECT * FROM employees
 WHERE last_name LIKE 'e%e'
 ORDER BY emp_no DESC;
 
+# Find all employees hired in the 90s and born on Christmas — 362 rows.
+SELECT * FROM employees
+WHERE birth_date LIKE '%12-25'
+      AND hire_date BETWEEN '1999-01-01' and '1999-12-31';
+
 
 
 
