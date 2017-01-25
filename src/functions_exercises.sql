@@ -13,7 +13,7 @@ WHERE first_name in ('Irena', 'Vidya', 'Maya')
 # as a single column in your results.
 # part two
 
-SELECT  concat(first_name," ", last_name) as "fullname"
+SELECT  concat(first_name, " ", last_name) as "fullname"
 FROM employees
 WHERE last_name like 'e%e';
 
@@ -24,7 +24,7 @@ WHERE last_name like 'e%e';
 SELECT  first_name, last_name, datediff(now(), hire_date) as "number of days employed"
 FROM employees
 WHERE birth_date LIKE '%12-25'
-      AND hire_date BETWEEN '1999-01-01' and '1999-12-31';
+AND hire_date BETWEEN '1999-01-01' and '1999-12-31';
 
 
 # GROUP BY clause to your query for last names with 'q' and
@@ -33,10 +33,10 @@ WHERE birth_date LIKE '%12-25'
 # to find employees whose unusual name is shared with others.
 #part four
 
-SELECT concat(first_name, " ",last_name) as "full_name", count(first_name) as "number of people with this name"
+SELECT concat(first_name, " ", last_name) as "full_name", count(first_name) as "number of people with this name"
 from  employees
 WHERE last_name like '%q%'
-      and last_name not like '%qu%'
+and last_name not like '%qu%'
 group by full_name
 order by 'number of people with this name' DESC;
 
