@@ -22,6 +22,14 @@ SELECT  * FROM employees
 WHERE last_name like 'e%e'
 ORDER BY  last_name, first_name;
 
+# Update your queries for employees with 'E' in their last name to sort the results by their employee number.
+# Now reverse the sort order for both queries
+SELECT * FROM employees
+WHERE last_name LIKE 'e%e'
+ORDER BY emp_no DESC;
+
+
+
 
 
 
