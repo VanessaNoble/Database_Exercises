@@ -17,3 +17,8 @@ WHERE (last_name LIKE '%E'
 GROUP BY last_name, first_name;
 
 
+# Find the unique last names with a 'q' but not 'qu'. You may use either DISTINCT or GROUP BY.
+SELECT last_name FROM employees
+WHERE last_name LIKE '%q%'
+      AND NOT last_name LIKE '%qu%'
+GROUP BY last_name;
