@@ -52,8 +52,23 @@ WHERE last_name LIKE '%q%'
 
 
 
+###NOTES
+  SELECT first_name, last_name
+  FROM employees
+  ORDER BY emp_no DESC;
 
+  #order by last name descending
+  SELECT * From employees
+  ORDER BY last_name DESC;
 
+  #chaining order by
+  SELECT * FROM employees
+  WHERE first_name = 'Leni'
+  ORDER BY gender, last_name Desc;
+
+  SELECT first_name, last_name
+  FROM employees
+  ORDER BY  last_name, first_name ASC;
 
 
 
