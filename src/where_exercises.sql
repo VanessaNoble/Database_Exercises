@@ -1,5 +1,5 @@
 # Be sure to select the employees database from the dropdown before you begin.
-SELECT * FROM employees;
+# SELECT * FROM employees;
 
 # Employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows
 SELECT first_name
