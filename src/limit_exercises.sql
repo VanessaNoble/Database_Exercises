@@ -11,3 +11,9 @@ WHERE birth_date LIKE '%12-25'
       AND hire_date BETWEEN '1999-01-01' and '1999-12-31'
 limit 5;
 
+#Update the query to find the tenth batch of results.
+SELECT * FROM employees
+WHERE birth_date LIKE '%12-25'
+      AND hire_date BETWEEN '1999-01-01' and '1999-12-31'
+limit 5 OFFSET 45;
+
