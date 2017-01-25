@@ -25,6 +25,31 @@ AND gender ='M';
 SELECT * FROM employees
 WHERE last_name LIKE 'E%'
 AND last_name like '%E';
+# Find all employees whose last name starts or ends with 'E' — 30,723 rows.
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '%E'
+      AND last_name LIKE 'E';
+
+
+# Duplicate the previous query and update it to find all employees whose last name starts and ends with 'E' — 899 rows.
+
+
+# Employees hired in the 90s — 135,214 rows.
+SELECT * FROM employees WHERE hire_date = '1990-01-01';
+
+# Employees born on Christmas — 842 rows.
+SELECT * FROM employees WHERE birth_date = '1990-10-25';
+
+# Find all employees hired in the 90s and born on Christmas — 362 rows.
+SELECT * FROM employees
+WHERE hire_date LIKE '199%'
+      AND birth_date LIKE '%12-25';
+
+
+
+
+
 
 
 
