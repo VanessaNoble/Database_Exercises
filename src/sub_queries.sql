@@ -8,13 +8,13 @@ SELECT * FROM employees where first_name in (
   where first_name like 'L%'
   );
 
-
 # Find all the employees with the same hire date as employee 101010 using a sub-query.
 SELECT * FROM employees WHERE employees.hire_date in(
   SELECT hire_date
   FROM employees
   WHERE emp_no = 101010
 );
+
 # Find all the titles held by all employees with the first name Aamod.
 SELECT * FROM titles where emp_no in(
   SELECT emp_no
