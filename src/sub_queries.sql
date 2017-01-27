@@ -28,8 +28,6 @@ From (
   select * from departments where dept_name like 'D%'
 ) department_with_d;
 
-
-
 # you can use sub-queries to get scalar values that you can use in the SELECT clause
 SELECT
 (SELECT count(*) FROM employees where gender = 'F') women_count,
@@ -47,9 +45,11 @@ SELECT * FROM departments WHERE dept_no IN (
 
 
 # BONUS Find all the department names that have female managers.
-SELECT * FROM departments WHERE dept_no IN (
+SELECT * FROM departments
+WHERE dept_no IN (
   SELECT dept_no
-  FROM dept_manager WHERE emp_no IN (
+  FROM dept_manager
+  WHERE emp_no IN (
     SELECT emp_no
     FROM employees WHERE gender = 'F'
   )
